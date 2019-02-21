@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>com.baseten.pl.baseTen</id>
+    <name>Base64 Utils</name>
+    <vendor email="gokul42252@gmail.com" url="http://www.thoughtnerds.com">Cretlabs</vendor>
+    <version>1.1</version>
+    <description>Convert base 64 String to image easily.Convert base 64 String to image easily.</description>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.gradle.java</depends>
+    <depends>com.intellij.modules.java</depends>
+    <idea-version since-build="145" until-build="193.*"/>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="Menu" text="Base64 Utils" description="Base64 To Image">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="b2img.BToImageAction" icon="/icon/convert.png" class="action.BToImageAction"
+                    text="Convert Base64 to Image"
+                    description="Convert Base64 to Image">
+                <keyboard-shortcut keymap="$default"
+                                   first-keystroke="shift ctrl alt B"
+                />
+            </action>
+            <action id="b2img.ImageToBAction" class="action.ImageToBAction"  icon="/icon/convert.png" text="Convert Image To Base64"
+                    description="Convert Image To Base64">
+                <keyboard-shortcut keymap="$default"
+                                   first-keystroke="shift ctrl alt X"
+                />
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
